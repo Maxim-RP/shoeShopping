@@ -1,0 +1,22 @@
+<template>
+    <div class="container">
+        <p class="title">{product.Name}</p>
+        <img class="product-img" src={product.Image__c}></img> 
+            <div class="button-box">
+                <lightning-button 
+                    class="slds-m-around_x-small" 
+                    variant="brand-outline"
+                    label="+Add"
+                    icon-position="right"  
+                    title="Primary action" 
+                    onclick={handleClick}></lightning-button>
+                <div class="price-box">
+                    <p><lightning-formatted-number 
+                        value={product.Price__c} 
+                        format-style="currency" 
+                        currency-code="EUR">
+                    </lightning-formatted-number></p>
+                </div>
+            </div> 
+    </div>
+</template>

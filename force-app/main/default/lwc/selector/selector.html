@@ -1,0 +1,25 @@
+<template>
+    <div class="wrapper">
+        <section class="content">
+            <div class="columns">
+                <main class="main">
+                    <c-list 
+                        stock={stock} 
+                        ontothecart={ontocartHandler}>
+                    </c-list>
+                </main>
+                <aside class="sidebar-second">
+                    <c-filter 
+                        onfilter={filterHandle}>
+                    </c-filter>
+                    <c-cart 
+                        tocartid={toCartId} 
+                        totalprice={totalPrice} 
+                        onclearcart={clearCartHandle}
+                        onorder={orderHandle}>
+                    </c-cart>
+                </aside>
+            </div>
+        </section>
+    </div>
+</template>

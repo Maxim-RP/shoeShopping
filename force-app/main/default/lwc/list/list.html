@@ -1,0 +1,11 @@
+<template>
+    <div class="container">
+        <template for:each={stock.data} for:item="product">
+            <c-tile 
+                key={product.id__c} 
+                product={product}
+                ontocart={toCartHandle}>
+            </c-tile>
+        </template>
+    </div>
+</template>

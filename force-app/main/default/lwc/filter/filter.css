@@ -1,0 +1,9 @@
+.wrapper {
+    margin:5px;
+}
+
+.incard-wrapper {
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+}

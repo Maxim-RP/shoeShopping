@@ -1,0 +1,16 @@
+<template>
+    <div class="wrapper">
+        <lightning-card 
+            title="Filters" 
+            icon-name="utility:filterList">
+            <div class="incard-wrapper">
+                <c-color-filter 
+                    oncolor={colorHandle}>
+                </c-color-filter>
+                <c-category-filter 
+                    oncategory={categoryHandle}>
+                </c-category-filter>
+            </div>
+        </lightning-card>
+    </div>
+</template>

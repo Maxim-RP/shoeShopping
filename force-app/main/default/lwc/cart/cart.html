@@ -1,0 +1,48 @@
+<template>
+    <div class="cart-wrapper">
+        <lightning-card 
+            title="Shopping Cart" 
+            icon-name="utility:cart">
+            <lightning-button 
+                if:true={visible} 
+                slot="actions" 
+                variant="brand-outline" 
+                label="Clear"
+                title="Primary action" 
+                onclick={handleClickClear} 
+                class="slds-m-left_x-small">
+            </lightning-button>
+            <lightning-button 
+                if:true={visible} 
+                slot="actions" 
+                variant="brand-outline" 
+                label="Order"
+                title="Primary action" 
+                onclick={handleClickOrder} 
+                class="slds-m-left_x-small">
+            </lightning-button>
+            <div class="cart-content">
+                <table>
+                    <tr key={item.Id} for:each={tocartid} for:item="item">
+                        <th class="name-column">{item.Name}</th>
+                        <th class="price-column">
+                            <lightning-formatted-number 
+                                value={item.Price__c} 
+                                format-style="currency"
+                                currency-code="EUR">
+                            </lightning-formatted-number>
+                        </th>
+                    </tr>
+                </table>
+                <p class="total-text" 
+                    if:true={visible}>Total: 
+                    <lightning-formatted-number 
+                        value={totalprice}
+                        format-style="currency" 
+                        currency-code="EUR">
+                    </lightning-formatted-number>
+                </p>
+            </div>
+        </lightning-card>
+    </div>
+</template>
